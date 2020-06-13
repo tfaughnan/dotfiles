@@ -142,3 +142,6 @@ PATH="$HOME/bin:$PATH"
 
 alias dotgit="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
+export VISUAL=vim
+export EDITOR=vim
+
