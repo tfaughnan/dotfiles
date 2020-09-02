@@ -91,6 +91,7 @@ fi
 unset use_color safe_term match_lhs sh
 
 alias cp="cp -i"                          # confirm before overwriting something
+alias mv="mv -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
@@ -145,3 +146,4 @@ alias dotgit="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 export VISUAL=vim
 export EDITOR=vim
 
+export TEXMFHOME=$HOME/.texmf
