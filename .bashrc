@@ -142,8 +142,12 @@ ex ()
 PATH="$HOME/bin:$PATH"
 
 alias dotgit="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias icat="kitty +kitten icat"
 
 export VISUAL=vim
 export EDITOR=vim
 
 export TEXMFHOME=$HOME/.texmf
+
+(cat ~/.cache/wal/sequences &)
+

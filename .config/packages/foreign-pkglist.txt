@@ -1,0 +1,13 @@
+bash-pipes
+cava
+gotop
+mpv-mpris
+otf-fira-code
+picom-ibhagwan-git
+rstudio-desktop-bin
+spotify
+vim-plug
+xdg-su
+xf86-input-keyboard
+xf86-input-mouse
+zoom

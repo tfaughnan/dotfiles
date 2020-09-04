@@ -1,13 +1,23 @@
+[colors]
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color3:#222}
+
 [bar/mybar]
-modules-left = i3 ;active-window
+modules-left = i3 ;title
 modules-center = player-mpris-tail
 ;modules-center = pomo spot
 modules-right = la-meteo pulseaudio battery date wireless-network
 ;override-redirect = true
 ;wm-restack = i3
 
-background = #000000
-foreground = #ffffff
+;line-size = 3
+
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 module-margin-left = 1
 module-margin-right = 1
@@ -43,15 +53,29 @@ type = internal/i3
 pin-workspaces = true
 enable-scroll = false
 
-;[module/title]
-;type = internal/xwindow
-;format = <label>
-;label = %title%
+label-focused = %name%
+label-unfocused = %name%
+label-visible = %name%
+label-urgent = %name%
 
-[module/active-window]
-type = custom/script
-exec = ~/bin/polybar-scripts/active-window
-interval = 1
+label-focused-padding = 1
+label-unfocused-padding = 1
+label-visible-padding = 1
+label-urgent-padding = 1
+
+
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground}
+
+[module/title]
+type = internal/xwindow
+format = <label>
+label = %title%
+
+;[module/active-window]
+;type = custom/script
+;exec = ~/bin/polybar-scripts/active-window
+;interval = 1
 
 
 [module/battery]

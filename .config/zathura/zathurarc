@@ -1,4 +1,4 @@
-set recolor-darkcolor "#cac3a5"
-set recolor-lightcolor "#181c27"
-set recolor true
+#set recolor-darkcolor "#cac3a5"
+#set recolor-lightcolor "#181c27"
+#set recolor true
 

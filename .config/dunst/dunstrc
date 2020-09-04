@@ -286,7 +286,7 @@
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
-    icon = ~/Downloads/alert-triangle.svg
+    icon = ~/Pictures/alert-triangle.svg
 
 [urgency_critical]
     background = "#900000"
