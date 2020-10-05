@@ -7,7 +7,7 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
-modules-left = i3 ;title
+modules-left = i3 polypomo ;title
 modules-center = player-mpris-tail
 ;modules-center = pomo spot
 modules-right = la-meteo pulseaudio battery date wireless-network
@@ -24,11 +24,25 @@ module-margin-right = 1
 
 font-0 = "Fira Code"
 font-1 = "FontAwesome"
+font-2 = "Noto Color Emoji:scale=10"
+; NOTE: emoji will be huge if scale is not specified
+; not sure why this is the case
 
 [module/player-mpris-tail]
 type = custom/script
 exec = ~/bin/polybar-scripts/player-mpris-tail.py -f '{:t60:{icon} {artist} - {title}:}'
 tail = true
+
+[module/polypomo]
+type = custom/script
+exec = ~/bin/polybar-scripts/polypomo/polypomo --breaktime 300
+tail = true
+label = %output%
+click-left = ~/bin/polybar-scripts/polypomo/polypomo toggle
+click-right = ~/bin/polybar-scripts/polypomo/polypomo end
+click-middle = ~/bin/polybar-scripts/polypomo/polypomo lock
+scroll-up = ~/bin/polybar-scripts/polypomo/polypomo time +60
+scroll-down = ~/bin/polybar-scripts/polypomo/polypomo time -60
 
 [module/spot]
 type = custom/script

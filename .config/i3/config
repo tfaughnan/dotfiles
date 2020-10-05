@@ -12,15 +12,18 @@
 set $mod Mod4
 
 # start pywal
-exec_always --no-startup-id wal -i ~/Pictures/wallpapers/mtk_lighthouse.jpg
+exec_always --no-startup-id wal -i ~/Pictures/wallpapers/grainy-pumpkin-field.jpeg
+
+# update zathurarc to match wal
+exec_always --no-startup-d ~/bin/wal-zathura
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color0 #333333
-set_from_resource $bg i3wm.color7 #f0f0f0
+set_from_resource $fg i3wm.color0 #000000
+set_from_resource $bg i3wm.color7 #ffffff
 
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
