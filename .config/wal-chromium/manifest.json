@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "my custom theme",
+    "version": "0.1",
+    "theme": {
+        "colors": {
+            "frame": [14, 31, 47],
+            "tab_text": [14, 31, 47],
+            "toolbar": [127, 207, 236],
+            "ntp_background": [14, 31, 47],
+            "ntp_text": [127, 207, 236],
+            "ntp_link": [127, 207, 236],
+            "bookmark_text": [14, 31, 47],
+            "tab_background_text": [127, 207, 236],
+            "tab_background_text_inactive": [127, 207, 236],
+            "tab_background_text_incognito": [14, 31, 47],
+            "tab_background_text_incognito_inactive": [14, 31, 47],
+            "frame_incognito": [127, 207, 236],
+            "toolbar_incognito": [14, 31, 47]
+
+
+        }
+    }
+}
+
