@@ -1,4 +1,7 @@
-#set recolor-darkcolor "#cac3a5"
-#set recolor-lightcolor "#181c27"
-#set recolor true
+set default-fg "#d6c7b7"
+set default-bg "#0c0603"
+
+set recolor-lightcolor "#0c0603"
+set recolor-darkcolor "#d6c7b7"
+set recolor "false"
 

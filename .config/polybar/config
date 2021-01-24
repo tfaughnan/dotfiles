@@ -7,6 +7,7 @@ secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
+;bottom = false
 modules-left = i3 polypomo ;title
 modules-center = player-mpris-tail
 ;modules-center = pomo spot
@@ -30,23 +31,23 @@ font-2 = "Noto Color Emoji:scale=10"
 
 [module/player-mpris-tail]
 type = custom/script
-exec = ~/bin/polybar-scripts/player-mpris-tail.py -f '{:t60:{icon} {artist} - {title}:}'
+exec = ~/.config/polybar/scripts/player-mpris-tail.py -f '{:t60:{icon} {artist} - {title}:}' -b chromium
 tail = true
 
 [module/polypomo]
 type = custom/script
-exec = ~/bin/polybar-scripts/polypomo/polypomo --breaktime 300
+exec = ~/.config/polybar/scripts/polypomo/polypomo ; --breaktime 300
 tail = true
 label = %output%
-click-left = ~/bin/polybar-scripts/polypomo/polypomo toggle
-click-right = ~/bin/polybar-scripts/polypomo/polypomo end
-click-middle = ~/bin/polybar-scripts/polypomo/polypomo lock
-scroll-up = ~/bin/polybar-scripts/polypomo/polypomo time +60
-scroll-down = ~/bin/polybar-scripts/polypomo/polypomo time -60
+click-left = ~/.config/polybar/scripts/polypomo/polypomo toggle
+click-right = ~/.config/polybar/scripts/polypomo/polypomo end
+click-middle = ~/.config/polybar/scripts/polypomo/polypomo lock
+scroll-up = ~/.config/polybar/scripts/polypomo/polypomo time +60
+scroll-down = ~/.config/polybar/scripts/polypomo/polypomo time -60
 
 [module/spot]
 type = custom/script
-exec = ~/bin/polybar-scripts/spot
+exec = ~/.config/polybar/scripts/spot
 interval = 5
 
 [module/pulseaudio]
@@ -88,7 +89,7 @@ label = %title%
 
 ;[module/active-window]
 ;type = custom/script
-;exec = ~/bin/polybar-scripts/active-window
+;exec = ~/.config/polybar/scripts/active-window
 ;interval = 1
 
 
@@ -129,13 +130,12 @@ ramp-signal-5 = 5
 
 [module/pomo]
 type = custom/script
-exec = ~/bin/polybar-scripts/pomo 1 1
+exec = ~/.config/polybar/scripts/pomo 1 1
 tail = true
 click-left = kill -SIGUSR1 $(pgrep pomo)
 
 [module/la-meteo]
 type = custom/script
-exec = ~/bin/polybar-scripts/la-meteo
+exec = ~/.config/polybar/scripts/la-meteo
 interval = 90
-
 

@@ -11,8 +11,12 @@
 
 set $mod Mod4
 
+# numpad always enters numbers, regardless of numlock state
+exec_always --no-startup-id setxkbmap -option numpad:mac
+
 # start pywal
-exec_always --no-startup-id wal -i ~/Pictures/wallpapers/grainy-pumpkin-field.jpeg
+#exec_always --no-startup-id wal -i ~/Pictures/wallpapers/poly-planets.jpg
+exec_always --no-startup-id wal -i ~/Pictures/wallpapers/space-dust.png
 
 # update zathurarc to match wal
 exec_always --no-startup-d ~/bin/wal-zathura
@@ -33,7 +37,11 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
+# start liftoff (my own custom app launcher)
+bindsym $mod+s exec ~/src/liftoff/liftoff
+
 # start dmenu (a program launcher)
+# with wal colors
 bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -41,6 +49,7 @@ bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # run dunst notification daemon on startup
+# with wal colors
 exec_always --no-startup-id dunst -nf "$bg" -nb "$fg" -nfr "$bg"
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -62,7 +71,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id ~/bin/dbus-session-export
 
 # lock screen
-bindsym $mod+x exec ~/bin/lock.sh ~/Pictures/padlock.png
+# bindsym $mod+x exec ~/bin/lock.sh ~/Pictures/padlock.png
+bindsym $mod+x exec ~/bin/lock
 
 # to get key names... use xev to get keycode (number), then find that number in the output of xmodmap -pke
 
@@ -91,6 +101,9 @@ bindsym $mod+plus exec --no-startup-id playerctl position 15+
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
+# scratchpad stuff
+#bindsym $mod+Shift+Tab move scratchpad
+#bindsym $mod+Tab scratchpad show
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -111,6 +124,9 @@ bindsym $mod+c exec chromium
 
 # chromium web-window
 bindsym $mod+g exec ~/bin/web-window
+
+# emoji picker
+bindsym $mod+comma exec ~/bin/gimme-emoji
 
 # kill focused window
 bindsym $mod+Shift+q kill

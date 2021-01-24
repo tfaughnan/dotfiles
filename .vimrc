@@ -40,9 +40,10 @@ Plug 'lervag/vimtex'
 let g:vimtex_view_method='zathura'
 let g:tex_flavor = 'latex'
 
-"Plug 'tmsvg/pear-tree'
+Plug 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 call plug#end()
-
-
 

@@ -3,20 +3,22 @@
     "name": "my custom theme",
     "version": "0.1",
     "theme": {
+        "images": {
+        },
         "colors": {
-            "frame": [14, 31, 47],
-            "tab_text": [14, 31, 47],
-            "toolbar": [127, 207, 236],
-            "ntp_background": [14, 31, 47],
-            "ntp_text": [127, 207, 236],
-            "ntp_link": [127, 207, 236],
-            "bookmark_text": [14, 31, 47],
-            "tab_background_text": [127, 207, 236],
-            "tab_background_text_inactive": [127, 207, 236],
-            "tab_background_text_incognito": [14, 31, 47],
-            "tab_background_text_incognito_inactive": [14, 31, 47],
-            "frame_incognito": [127, 207, 236],
-            "toolbar_incognito": [14, 31, 47]
+            "frame": [9, 14, 17],
+            "tab_text": [9, 14, 17],
+            "toolbar": [237, 235, 223],
+            "ntp_background": [9, 14, 17],
+            "ntp_text": [237, 235, 223],
+            "ntp_link": [237, 235, 223],
+            "bookmark_text": [9, 14, 17],
+            "tab_background_text": [237, 235, 223],
+            "tab_background_text_inactive": [237, 235, 223],
+            "tab_background_text_incognito": [9, 14, 17],
+            "tab_background_text_incognito_inactive": [9, 14, 17],
+            "frame_incognito": [237, 235, 223],
+            "toolbar_incognito": [9, 14, 17]
 
 
         }
