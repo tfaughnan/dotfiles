@@ -16,7 +16,8 @@ exec_always --no-startup-id setxkbmap -option numpad:mac
 
 # start pywal
 #exec_always --no-startup-id wal -i ~/Pictures/wallpapers/poly-planets.jpg
-exec_always --no-startup-id wal -i ~/Pictures/wallpapers/space-dust.png
+#exec_always --no-startup-id wal -i ~/Pictures/wallpapers/space-dust.png
+exec_always --no-startup-id wal -i ~/Pictures/wallpapers/calvin-hobbes-forest.jpg
 
 # update zathurarc to match wal
 exec_always --no-startup-d ~/bin/wal-zathura
@@ -91,6 +92,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use playerctl as an alternative to PulseAudio.
+# NOTE: may need to add mod to Next and End to avoid interfering with PgUp and PgDn
 bindsym Home exec --no-startup-id playerctl -i chromium play-pause
 bindsym Next exec --no-startup-id playerctl -i chromium previous
 bindsym End exec --no-startup-id playerctl -i chromium next
@@ -121,12 +123,13 @@ bindsym $mod+Return exec kitty
 
 # chromium shortcut
 bindsym $mod+c exec chromium
+bindsym $mod+Control+c exec chromium --incognito
 
 # chromium web-window
-bindsym $mod+g exec ~/bin/web-window
+# bindsym $mod+g exec ~/bin/web-window
 
 # emoji picker
-bindsym $mod+comma exec ~/bin/gimme-emoji
+#bindsym $mod+comma exec ~/bin/gimme-emoji
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -193,6 +196,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws11 "11"
 
 # Define custom names for workspaces using Font Awesome 4.7
 set $ws_terminal "1. Terminal >_"
@@ -214,6 +218,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
+bindsym $mod+Control+1 workspace number $ws11
 
 # move focused container to workspace
 #bindsym $mod+Shift+1 move container to workspace $ws_terminal
@@ -230,6 +235,7 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+Control+1 move container to workspace number $ws11
 
 # assign [class="konsole"] $ws_terminal
 # assign [class="Chromium"] $ws_web
