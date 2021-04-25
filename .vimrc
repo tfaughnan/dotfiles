@@ -42,8 +42,14 @@ let g:tex_flavor = 'latex'
 
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'dense-analysis/ale'
+
+Plug 'preservim/nerdtree'
 
 call plug#end()
 

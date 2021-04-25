@@ -1,0 +1,28 @@
+snippet bp "latex boilerplate" b
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\title{$1}
+\author{$2}
+
+\begin{document}
+\maketitle
+$0
+
+\end{document}
+endsnippet
+
+snippet homework "defines homework problem set environment" b
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep{\bfseries #1}\hskip \labelsep{\bfseries #2.}]}{\end{trivlist}}
+endsnippet
+
+snippet \beg "begin{} / end{}" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
