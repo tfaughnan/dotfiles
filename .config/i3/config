@@ -38,19 +38,28 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
+# rofi (dmenu replacement)
+bindsym $mod+d exec rofi -show run
+
+# rofi passmenu
+bindsym $mod+p exec ~/bin/passmenu-rofi
+
+# rofi emoji picker
+bindsym $mod+e exec ~/bin/rofi-emoji.sh
+
 # start liftoff (my own custom app launcher)
-bindsym $mod+s exec ~/src/liftoff/liftoff
+#bindsym $mod+s exec ~/src/liftoff/liftoff
 
 # start dmenu (a program launcher)
 # with wal colors
-bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
+#bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # pass extension for dmenu
-bindsym $mod+p exec passmenu -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
+#bindsym $mod+p exec passmenu -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 
 # run dunst notification daemon on startup
 # with wal colors
