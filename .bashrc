@@ -63,7 +63,7 @@ alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
 # how i keep track of my dotfiles
-alias dotgit="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias dotgit="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # view images right in the terminal!
 alias icat="kitty +kitten icat"
