@@ -1,0 +1,50 @@
+configuration {
+    font: "Font Awesome 5 Free 12";
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    background-color:       @background;
+    text-color:             @foreground;
+    border:                 2px;
+	border-color:			@foreground;
+	border-radius:          5px;
+    height:                 140px;
+    width:                  150px;
+    x-offset:               -885;
+ 	y-offset:               -445;
+    padding:                5px 5px 5px 10px;
+}
+
+prompt {
+	enabled:                false;
+}
+
+inputbar {
+	children:               [  ];
+}
+
+listview {
+    background-color:       @background;
+    columns:                1;
+    spacing:                2px;
+    cycle:                  true;
+    dynamic:                true;
+    layout:                 vertical;
+}
+
+element {
+	background-color:       @background;
+    text-color:             @foreground;
+    orientation:            horizontal;
+    border-radius:          10px;
+    padding:                0px 0px 0px 10px;
+}
+
+element-text {
+	expand:                 true;
+    horizontal-align:       0;
+    vertical-align:         0;
+    margin:                 2px 2px 4px 0px;
+}
