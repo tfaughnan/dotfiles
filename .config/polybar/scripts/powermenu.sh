@@ -15,10 +15,10 @@ options="$lock\n$logout\n$reboot\n$shutdown"
 chosen="$(echo -e "$options" | rofi -theme "$theme" -p "" -dmenu -selected-row 0)"
 case $chosen in
     $shutdown)
-        notify-send shutdown
+        shutdown now
         ;;
     $reboot)
-        notify-send reboot
+        shutdown -r now
         ;;
     $lock)
         $HOME/bin/lock.sh
