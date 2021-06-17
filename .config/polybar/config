@@ -19,7 +19,7 @@ alert = ${xrdb:color3:#222}
 [bar/mybar]
 modules-left = powermenu div i3 div polypomo div weather
 modules-center = player-mpris-tail
-modules-right = pulseaudio div battery div date div wireless-network
+modules-right = pulseaudio div battery div date div wireless-network mullvad
 font-0 = "Fira Code"
 font-1 = "Font Awesome 5 Free:style=Regular"
 font-2 = "Font Awesome 5 Free:style=Solid"
@@ -109,6 +109,12 @@ format-connected =  <label-connected>
 format-disconnected = <label-disconnected>
 label-connected = %essid%
 label-disconnected = no wifi
+
+[module/mullvad]
+type = custom/script
+exec = ~/.config/polybar/scripts/mullvad.sh
+interval = 300
+label = %{O5}%output%
 
 [module/powermenu]
 type = custom/text
