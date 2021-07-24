@@ -37,7 +37,7 @@ shopt -s expand_aliases
 shopt -s histappend
 
 # put all my sloppy scripts on the PATH
-PATH="$HOME/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # no emacs allowed here
 export VISUAL=vim
