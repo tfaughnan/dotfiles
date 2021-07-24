@@ -53,5 +53,9 @@ let g:ale_c_cc_options = '-std=gnu99 -Wall'
 
 Plug 'preservim/nerdtree'
 
-call plug#end()
+Plug 'jpalardy/vim-slime'
+let g:slime_target = 'tmux'
+let g:slime_default_config = {'socket_name': 'default', 'target_pane': '{last}'}
+let g:slime_dont_ask_default = 1
 
+call plug#end()
