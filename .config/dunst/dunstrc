@@ -335,9 +335,9 @@
 #   script appname summary body icon urgency
 # where urgency can be "LOW", "NORMAL" or "CRITICAL".
 
-[play_ayo]
-	summary = "Pomodoro"
-	script = ~/bin/play-ayo
+#[play_ayo]
+#	summary = "Pomodoro"
+#	script = ~/bin/play-ayo
 
 
 
