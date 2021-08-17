@@ -11,7 +11,7 @@
 set $mod Mod4
 
 # start pywal
-exec_always --no-startup-id wal -i ~/pictures/wallpapers/space-dust.png
+exec_always --no-startup-id wal -i ~/img/wallpapers/space-dust.png
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
