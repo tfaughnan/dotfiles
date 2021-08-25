@@ -59,6 +59,7 @@ let g:slime_default_config = {'socket_name': 'default', 'target_pane': '{last}'}
 let g:slime_dont_ask_default = 1
 
 Plug 'vimwiki/vimwiki'
+let g:vimwiki_list = [{'path': '~/doc/wiki/'}]
 
 Plug 'ledger/vim-ledger'
 
