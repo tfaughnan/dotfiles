@@ -60,6 +60,7 @@ let g:slime_dont_ask_default = 1
 
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/doc/wiki/'}]
+let g:vimwiki_global_ext = 0
 
 Plug 'ledger/vim-ledger'
 
