@@ -62,7 +62,12 @@ bindsym $mod+x exec ~/bin/lock.sh
 # to get key names... use xev to get keycode (number), then find that number in the output of xmodmap -pke
 
 # screenshot (using flameshot)
-bindsym Print exec flameshot gui
+# bindsym Print exec flameshot gui
+#
+# For now, i'm switching to shotgun, around which i have a little shell script wrapper...
+# flameshot is good, but necessitates a daemon process for systray support,
+# something i do not need
+bindsym Print exec ~/bin/screenshot.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
