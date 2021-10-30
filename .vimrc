@@ -48,8 +48,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 Plug 'vim-airline/vim-airline'
 
 Plug 'dense-analysis/ale'
-"gnu extensions <3
-let g:ale_c_cc_options = '-std=gnu99 -Wall'
+let g:ale_c_parse_makefile = 1
 
 Plug 'preservim/nerdtree'
 
