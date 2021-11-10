@@ -29,7 +29,16 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-0+25"
+    #
+    # geometry = "300x5-0+25"
+
+    # NOTE TO SELF: according to dunst(5), geometry is now deprecated!
+    # Now it is split up as follows:
+    width = 300
+    height = 300
+    notification_limit = 5
+    origin = top-right
+    offset = 0x25
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
