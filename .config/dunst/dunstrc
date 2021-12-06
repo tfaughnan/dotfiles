@@ -141,6 +141,8 @@
     # Possible values are "left", "center" and "right".
     alignment = left
 
+    vertical_alignment = left
+
     # Show age of message if message is older than show_age_threshold
     # seconds.
     # Set to -1 to disable.

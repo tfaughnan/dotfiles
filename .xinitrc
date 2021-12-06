@@ -39,5 +39,8 @@ fi
 numlockx &
 setxkbmap -option numpad:mac
 
+# export QT_QPA_PLATFORMTHEME=gtk2
+export QT_STYLE_OVERRIDE=Windows
+
 xsetroot -cursor_name left_ptr
 exec bspwm
