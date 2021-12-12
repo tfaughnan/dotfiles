@@ -9,24 +9,24 @@
 ;===========================================
 
 [colors]
-background = ${xrdb:color0:#222}
-foreground = ${xrdb:color7:#222}
-foreground-alt = ${xrdb:color3:#222}
+background = ${xrdb:color0:#090E11}
+foreground = ${xrdb:color7:#edebdf}
+foreground-alt = ${xrdb:color3:#528295}
 primary = ${xrdb:color1:#222}
 secondary = ${xrdb:color2:#222}
 alert = ${xrdb:color3:#222}
 
 [bar/mybar]
-modules-left = powermenu div i3 div polypomo div weather
+modules-left = powermenu div bspwm div polypomo div weather
 modules-center = player-mpris-tail
 modules-right = pulseaudio div battery div date div wireless-network mullvad
 font-0 = "Fira Code"
 font-1 = "Font Awesome 5 Free:style=Regular"
 font-2 = "Font Awesome 5 Free:style=Solid"
 font-3 = "Noto Color Emoji:scale=10"
-font-4 = "Weather Icons:style=Regular"
 border-bottom-size = 2
 border-bottom-color = ${colors.foreground-alt}
+wm-restack = bspwm
 
 [module/div]
 type = custom/text
@@ -48,6 +48,19 @@ label-visible-padding = 1
 label-urgent-padding = 1
 label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.foreground}
+
+[module/bspwm]
+type = internal/bspwm
+pine-workspaces = true
+enable-click = true
+enable-scroll = false
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground}
+label-focused-padding = 0
+label-urgent-padding = 0
+label-occupied-padding = 0
+label-empty-padding = 0
+label-empty =
 
 [module/polypomo]
 type = custom/script

@@ -1,4 +1,4 @@
 browser "chromium &> /dev/null"
-include /usr/share/doc/newsboat/contrib/colorschemes/nord
+#include /usr/share/doc/newsboat/contrib/colorschemes/nord
 
 player "mpv"
