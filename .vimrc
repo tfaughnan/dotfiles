@@ -63,4 +63,6 @@ let g:vimwiki_global_ext = 0
 
 Plug 'ledger/vim-ledger'
 
+Plug 'ap/vim-css-color'
+
 call plug#end()
