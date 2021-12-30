@@ -50,7 +50,7 @@ export TEXMFHOME=$HOME/.texmf
 export PF_SOURCE=$HOME/.config/pfetch.conf
 
 # apply wal color theme
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 
 # some helpful aliases
 alias cp="cp -i"
