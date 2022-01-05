@@ -1,14 +1,11 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
+@import "colors.rasi"
+
+* {
+    overlay:                        #00000000;
+}
 
 configuration {
-	font:							"Noto Sans Bold 10";
+	font:							"Inter 10";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"";
@@ -17,35 +14,25 @@ configuration {
 	sidebar-mode: 					false;
 }
 
-* {
-    background:                     #00000060;
-    background-alt:              	#00000000;
-    background-bar:                 #f2f2f215;
-    foreground:                     #f2f2f2EE;
-    accent:			            	#ffffff66;
-}
-
 window {
-    transparency:                   "real";
     background-color:               @background;
     text-color:                     @foreground;
-	border:							0px;
-	border-color:					@border;
-    border-radius:                  0px;
-	width:							100%;
-	height:							100%;
+	border:							1px;
+	border-color:					@foreground;
+	width:							35%;
+    location:                       center;
 }
 
 prompt {
     enabled: 						true;
 	padding: 						0.30% 1% 0% -0.5%;
-	background-color: 				@background-alt;
+	background-color: 				@overlay;
 	text-color: 					@foreground;
 	font:							"FantasqueSansMono Nerd Font 12";
 }
 
 entry {
-    background-color:               @background-alt;
+    background-color:               @overlay;
     text-color:                     @foreground;
     placeholder-color:              @foreground;
     expand:                         true;
@@ -57,55 +44,50 @@ entry {
 
 inputbar {
 	children: 						[ prompt, entry ];
-    background-color:               @background-bar;
+    background-color:               @background;
     text-color:                     @foreground;
     expand:                         false;
-	border:							0.1%;
-    border-radius:                  6px;
-	border-color:					@accent;
-    margin:                         0% 30% 0% 30%;
-    padding:                        1%;
+    margin:                         0% 0% 0% 0%;
+    padding:                        1.5%;
 }
 
 listview {
-    background-color:               @background-alt;
-    columns:                        7;
-    lines:                          4;
-    spacing:                        2%;
+    background-color:               @overlay;
+    padding:                        10px;
+    columns:                        5;
+    lines:                          3;
+    spacing:                        0%;
     cycle:                          false;
     dynamic:                        true;
     layout:                         vertical;
 }
 
 mainbox {
-    background-color:               @background-alt;
-	border:							0% 0% 0% 0%;
-    border-radius:                  0% 0% 0% 0%;
-	border-color:					@accent;
+    background-color:               @overlay;
     children:                       [ inputbar, listview ];
-    spacing:                       	8%;
-    padding:                        10% 8.5% 10% 8.5%;
+    spacing:                       	0%;
+    padding:                        0%;
 }
 
 element {
-    background-color:               @background-alt;
+    background-color:               @overlay;
     text-color:                     @foreground;
     orientation:                    vertical;
     border-radius:                  0%;
-    padding:                        2.5% 0% 2.5% 0%;
+    padding:                        2% 0% 2% 0%;
 }
 
 element-icon {
-    background-color: 				@background-alt;
+    background-color: 				inherit;
     text-color:       				inherit;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    size:                           81px;
+    size:                           64px;
     border:                         0px;
 }
 
 element-text {
-    background-color: 				@background-alt;
+    background-color: 				@overlay;
     text-color:       				inherit;
     expand:                         true;
     horizontal-align:               0.5;
@@ -114,9 +96,9 @@ element-text {
 }
 
 element selected {
-    background-color:               @background-bar;
+    background-color:               @selection;
     text-color:                     @foreground;
 	border:							0% 0% 0% 0%;
     border-radius:                  12px;
-    border-color:                  	@accent;
+    border-color:                  	@background;
 }

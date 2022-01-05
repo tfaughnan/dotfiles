@@ -1,4 +1,18 @@
-browser "chromium &> /dev/null"
-#include /usr/share/doc/newsboat/contrib/colorschemes/nord
+auto-reload yes
+suppress-first-reload yes
+reload-time 360
+
+bind-key j down
+bind-key k up
+bind-key g home
+bind-key G end
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key U show-urls
 
 player "mpv"
+browser "chromium &> /dev/null"
+
+color listnormal        white   default
+color listnormal_unread green   default

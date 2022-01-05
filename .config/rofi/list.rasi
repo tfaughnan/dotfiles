@@ -1,0 +1,67 @@
+@import "colors.rasi"
+
+* {
+    background-color:            @background;
+    border-color:                @foreground;
+    spacing:                     2;
+}
+window {
+    background-color: @background;
+    border:           1;
+    padding:          5;
+}
+textbox {
+    text-color: @foreground;
+}
+listview {
+    lines: 15;
+    fixed-height: true;
+    border:       2px solid 0px 0px ;
+    border-color: @foreground;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px ;
+}
+element {
+    border:  0;
+    padding: 2px ;
+}
+element.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+element.selected {
+    background-color: @selection;
+    text-color:       @foreground;
+}
+element.alternate {
+    background-color: @alternate;
+    text-color:       @foreground;
+}
+inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    2px ;
+}
+entry {
+    spacing:    0;
+    text-color: @foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+inputbar {
+    children:   [ prompt, textbox-prompt-sep, entry ];
+}
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @foreground;
+    margin:     0px 0.3em 0em 0em ;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}

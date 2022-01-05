@@ -12,19 +12,19 @@ super + Return
 
 # scratchpad
 super + space
-    ~/bin/scratchpad-toggle.sh
+    scratchpad-toggle.sh
 
 # program launcher
 super + d
-    dmenu_run -nb '#181c27' -nf '#ada37a' -sb '#ada37a' -sf '#181c27'
+    rofi -modi drun -show drun -show-icons -theme launch
 
 # password manager
 super + p
-    passmenu
+    passmenu-rofi -theme list
 
 # emoji picker
 super + e
-    demoji.sh
+    remoji.sh -theme list
 
 # screenshot
 Print

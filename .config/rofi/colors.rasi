@@ -1,0 +1,8 @@
+/* colors */
+
+* {
+  foreground: #edebdfff;
+  background: #090e11ff;
+  selection: #528295ff;
+  alternate: #222222ff;
+}

@@ -9,30 +9,41 @@
 ;===========================================
 
 [colors]
-background = ${xrdb:color0:#090E11}
-foreground = ${xrdb:color7:#edebdf}
-foreground-alt = ${xrdb:color3:#528295}
-primary = ${xrdb:color1:#222}
-secondary = ${xrdb:color2:#222}
-alert = ${xrdb:color3:#222}
+transparent = #00000000
+background = #323232
+foreground = #ffffff
+alternate0 = #ffc56d
+alternate1 = #d25252
+alternate2 = #d096d9
+alternate3 = #efb5f7
+alternate4 = #8ab6d9
+alternate5 = #6c99ba
+alternate6 = #a4c161
 
 [bar/mybar]
-modules-left = powermenu div bspwm div polypomo div weather
+modules-left = powermenu bspwm polypomo weather pl-left
 modules-center = player-mpris-tail
-modules-right = pulseaudio div battery div date div wireless-network mullvad
-font-0 = "Fira Code"
-font-1 = "Font Awesome 5 Free:style=Regular"
-font-2 = "Font Awesome 5 Free:style=Solid"
+modules-right = pl-right pulseaudio battery date wireless-network mullvad
+background = ${colors.transparent}
+foreground = ${colors.foreground}
+font-0 = "Inter:size=12;2"
+font-1 = "Font Awesome 5 Free:style=Regular;1"
+font-2 = "Font Awesome 5 Free:style=Solid;1"
 font-3 = "Noto Color Emoji:scale=10"
+font-4 = "Hack Nerd Font Mono:size=25;4"
+font-5 = "Hack Nerd Font Mono:size=30"
 border-bottom-size = 2
-border-bottom-color = ${colors.foreground-alt}
+border-bottom-color = ${colors.foreground}
 wm-restack = bspwm
+height = 25
 
-[module/div]
+[module/powermenu]
 type = custom/text
-content = |
-content-padding = 1
-content-foreground = ${colors.foreground-alt}
+content = 
+click-left = ~/.config/polybar/scripts/powermenu.sh
+content-background = ${colors.alternate2}
+content-foreground = ${colors.foreground}
+content-padding = 2
 
 [module/i3]
 type = internal/i3
@@ -51,16 +62,36 @@ label-focused-background = ${colors.foreground}
 
 [module/bspwm]
 type = internal/bspwm
-pine-workspaces = true
+pin-workspaces = true
 enable-click = true
 enable-scroll = false
-label-focused-foreground = ${colors.background}
+label-empty = ""
+label-focused-padding-left = 1
+label-focused-padding-right = 2
+label-urgent-padding-left = 1
+label-urgent-padding-right = 2
+label-occupied-padding-left = 1
+label-occupied-padding-right = 2
+label-empty-padding-left = 1
+label-empty-padding-right = 2
 label-focused-background = ${colors.foreground}
-label-focused-padding = 0
-label-urgent-padding = 0
-label-occupied-padding = 0
-label-empty-padding = 0
-label-empty =
+label-focused-foreground = ${colors.background}
+label-urgent-background = ${colors.alternate5}
+label-urgent-foreground = ${colors.foreground}
+label-occupied-background = ${colors.alternate5}
+label-occupied-foreground = ${colors.foreground}
+label-empty-background = ${colors.alternate5}
+label-empty-foreground = ${colors.foreground}
+label-focused-empty-background = ${colors.foreground}
+label-focused-empty-foreground = ${colors.background}
+label-dimmed-background = ${colors.alternate5}
+label-dimmed-foreground = ${colors.foreground}
+label-separator-background = ${colors.alternate5}
+label-separator-foreground = ${colors.foreground}
+label-separator = ""
+format-background = ${colors.alternate5}
+format-foreground = ${colors.foreground}
+;format-padding = 2
 
 [module/polypomo]
 type = custom/script
@@ -72,17 +103,43 @@ click-right = ~/.config/polybar/scripts/polypomo end
 click-middle = ~/.config/polybar/scripts/polypomo lock
 scroll-up = ~/.config/polybar/scripts/polypomo time +60
 scroll-down = ~/.config/polybar/scripts/polypomo time -60
+format-padding = 2
+format-background = ${colors.alternate6}
+format-foreground = ${colors.foreground}
 
 [module/weather]
 type = custom/script
 exec = ~/.config/polybar/scripts/weather.sh
 interval = 300
+label-padding-left = 2
+format-padding = 0
+format-background = ${colors.alternate1}
+format-foreground = ${colors.foreground}
+
+[module/pl-left]
+type = custom/text
+content = ""
+content-padding = 0
+content-foreground = ${colors.alternate1}
+content-background = ${colors.transparent}
+content-font = 6
 
 [module/player-mpris-tail]
 type = custom/script
 exec = ~/.config/polybar/scripts/player-mpris-tail.py -f '{:t60:{icon} {artist} - {title}:}' -b chromium
 click-left = ~/.config/polybar/scripts/player-mpris-tail.py play-pause &
 tail = true
+format-padding = 2
+format-background = ${colors.transparent}
+format-foreground = ${colors.foreground}
+
+[module/pl-right]
+type = custom/text
+content = ""
+content-padding = 0
+content-foreground = ${colors.alternate1}
+content-background = ${colors.transparent}
+content-font = 6
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -91,10 +148,17 @@ use-ui-max = true
 interval = 5
 format-volume = <ramp-volume> <label-volume>%
 label-volume = %percentage%
+format-muted = <label-muted>
 label-muted = MUTE
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+format-volume-padding = 2
+format-muted-padding = 2
+format-volume-background = ${colors.alternate1}
+format-volume-foreground = ${colors.foreground}
+format-muted-background = ${colors.alternate1}
+format-muted-foreground = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
@@ -107,6 +171,15 @@ format-discharging = <label-discharging>
 label-full =  %percentage%%
 label-charging =  %percentage%%
 label-discharging =  %percentage%%
+format-full-padding = 2
+format-charging-padding = 2
+format-discharging-padding = 2
+format-charging-background = ${colors.alternate6}
+format-charging-foreground = ${colors.foreground}
+format-discharging-background = ${colors.alternate6}
+format-discharging-foreground = ${colors.foreground}
+format-full-background = ${colors.alternate6}
+format-full-foreground = ${colors.foreground}
 
 [module/date]
 type = internal/date
@@ -114,23 +187,31 @@ label =  %date% %time%
 date = %a %Y-%m-%d
 time = %H:%M:%S
 interval = 1.0
+format-padding = 2
+format-background = ${colors.alternate5}
+format-foreground = ${colors.foreground}
 
 [module/wireless-network]
 type = internal/network
 interface = wlp2s0
-format-connected =  <label-connected>
+format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected = %essid%
+label-connected =  %essid%
 label-disconnected = no wifi
+format-connected-padding = 2
+format-disconnected-padding = 2
+format-connected-background = ${colors.alternate2}
+format-connected-foreground = ${colors.foreground}
+format-disconnected-background = ${colors.alternate2}
+format-disconnected-foreground = ${colors.foreground}
 
 [module/mullvad]
 type = custom/script
 exec = ~/.config/polybar/scripts/mullvad.sh
 interval = 300
-label = %{O5}%output%
+label = %output%
+format-background = ${colors.alternate2}
+format-foreground = ${colors.foreground}
+label-padding-right = 1
 
-[module/powermenu]
-type = custom/text
-content = 
-click-left = ~/.config/polybar/scripts/powermenu.sh
-content-offset = 10
+; vim: set ft=dosini:
