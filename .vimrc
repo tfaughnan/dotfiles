@@ -49,6 +49,7 @@ Plug 'vim-airline/vim-airline'
 
 Plug 'dense-analysis/ale'
 let g:ale_c_parse_makefile = 1
+let g:ale_python_mypy_options = '--ignore-missing-imports'      " avoid bug with venvs
 
 Plug 'preservim/nerdtree'
 
