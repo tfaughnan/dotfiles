@@ -66,4 +66,6 @@ Plug 'ledger/vim-ledger'
 
 Plug 'ap/vim-css-color'
 
+Plug 'lepture/vim-jinja'
+
 call plug#end()
