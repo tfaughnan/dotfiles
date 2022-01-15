@@ -10,6 +10,12 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' | awk '{printf $0}'
 }
 
+# i dont like how venv adds to my PS1, so i will do it myself
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+get_venv() {
+    [ -n "$VIRTUAL_ENV" ] && printf ' [%s]' $(basename "$VIRTUAL_ENV")
+}
+
 # happy face if last exit code was 0, angry otherwise
 exit_emoji() {
     if [ "$1" = 0 ]; then
@@ -21,7 +27,7 @@ exit_emoji() {
 
 # finally, construct the prompt
 # NOTE: the colors don't mean much, since i usually use pywal
-PS1="╭─\[\033[1;34m\]\u\[\033[1;37m\] @ \[\033[1;33m\]\h\[\033[1;37m\]: \W\$(LAST_EXIT=\$? ; parse_git_branch ; printf '\n╰─' ; exit_emoji \$LAST_EXIT)->\[\033[0m\] "
+PS1="╭─\[\033[1;34m\]\u\[\033[1;37m\] @ \[\033[1;33m\]\h\[\033[1;37m\]: \W\$(LAST_EXIT=\$? ; parse_git_branch ; get_venv ; printf '\n╰─' ; exit_emoji \$LAST_EXIT)->\[\033[0m\] "
 
 # more tab completion following commands
 complete -cf sudo
