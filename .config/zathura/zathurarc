@@ -3,4 +3,5 @@ set default-bg "#0c0603"
 
 set recolor-lightcolor "#0c0603"
 set recolor-darkcolor "#d6c7b7"
-set recolor "false"
+set recolor false
+set recolor-reverse-video true
