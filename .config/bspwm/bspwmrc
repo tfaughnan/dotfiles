@@ -29,7 +29,7 @@ if [ ! -e /tmp/bspwm_started ]; then
     kitty --name kitty_main &
     kitty --name kitty_sysmonitor "$SHELL" -c "gotop; exec $SHELL -i" &
     kitty --name kitty_ws5 --session ~/.config/kitty/ws5.session &
-    kitty --name kitty_music "$SHELL" -c "ncmpcpp; exec $SHELL -i" &
+    kitty --name kitty_music "$SHELL" -c "ncspot; exec $SHELL -i" &
     kitty --name kitty_irc "$SHELL" -c "weechat; exec $SHELL -i" &
 
     bspc desktop -f I
