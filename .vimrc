@@ -5,8 +5,8 @@ set showmatch       "briefly highlight matching braces/parentheses
 set hlsearch        "highlight search results
 set incsearch       "show incremental results while typing query
 
-set tabstop=8       "display \t with width 8
-set shiftwidth=8    "display indents with width 8 (e.g., on lines after a { character in C)
+set tabstop=4       "display \t with width 4
+set shiftwidth=4    "display indents with width 4 (e.g., on lines after a { character in C)
 set softtabstop=0   "turn off feature that inserts a mix of \t and spaces to achieve a desired width when pressing tab key
 set expandtab       "pressing tab key inserts # spaces == tabstop (instead of a \t)
 set autoindent      "indent new line if previous line is indented
