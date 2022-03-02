@@ -68,6 +68,10 @@ Plug 'ap/vim-css-color'
 
 Plug 'lepture/vim-jinja'
 
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
+
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
