@@ -17,6 +17,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey '^r' history-incremental-search-backward
 
+bindkey -v '^?' backward-delete-char
+
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
