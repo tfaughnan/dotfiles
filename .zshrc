@@ -9,8 +9,9 @@ get_venv() {
     if [ -n "$VIRTUAL_ENV" ]; then printf '%%F{magenta}[%s]%%f ' $(basename "$VIRTUAL_ENV"); fi
 }
 
-PS1="╭─%B%F{blue}%n%f @ %F{yellow}%M%f: %1~ $(get_git_branch)$(get_venv)
-╰─%(?.🙂.👿)->%b "
+setopt PROMPT_SUBST
+PS1='╭─%B%F{blue}%n%f @ %F{yellow}%M%f: %1~ $(get_git_branch)$(get_venv)
+╰─%(?.🙂.👿)->%b '
 
 HISTFILE="$HOME/.cache/zsh/history"
 HISTSIZE=1000
