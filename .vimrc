@@ -54,9 +54,9 @@ let g:ale_python_mypy_options = '--ignore-missing-imports'      " avoid bug with
 Plug 'preservim/nerdtree'
 
 Plug 'jpalardy/vim-slime'
-let g:slime_target = 'tmux'
-let g:slime_default_config = {'socket_name': 'default', 'target_pane': '{last}'}
-let g:slime_dont_ask_default = 1
+let g:slime_target = 'kitty'
+"let g:slime_default_config = {'socket_name': 'default', 'target_pane': '{last}'}
+"let g:slime_dont_ask_default = 1
 
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/doc/wiki/'}]
