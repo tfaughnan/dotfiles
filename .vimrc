@@ -57,4 +57,5 @@ let g:vim_markdown_folding_disabled = 1
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'https://git.sr.ht/~sircmpwn/hare.vim'
+Plug 'tikhomirov/vim-glsl'
 call plug#end()
