@@ -40,6 +40,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 Plug 'vim-airline/vim-airline'
 Plug 'dense-analysis/ale'
+let g:ale_echo_msg_format = '%linter% says %code%: %s'
 let g:ale_c_parse_makefile = 1
 let g:ale_python_mypy_options = '--ignore-missing-imports'
 Plug 'preservim/nerdtree'
