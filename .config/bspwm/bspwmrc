@@ -17,6 +17,10 @@ feh --bg-scale ~/img/wallpapers/tree-of-life-god.png
 picom -b
 ~/.config/polybar/launch.sh
 
+# for some reason these default to floating
+bspc rule -a Zathura state=tiled
+bspc rule -a Emacs state=tiled
+
 # startup layout (file in /tmp/ prevents this from running on config reloads)
 
 if [ ! -e /tmp/bspwm_started ]; then
