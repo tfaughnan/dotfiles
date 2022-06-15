@@ -87,7 +87,7 @@ Menu
 #
 
 # quit bspwm
-super + shift + e
+super + ctrl + shift + e
     bspc quit && rm /tmp/bspwm_started
 
 # restart bspwm
