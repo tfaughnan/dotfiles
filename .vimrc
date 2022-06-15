@@ -48,6 +48,7 @@ Plug 'jpalardy/vim-slime'
 let g:slime_target = 'kitty'
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{'path': '~/doc/wiki/'}]
+let g:vimwiki_listsyms = ' .o~x'
 let g:vimwiki_global_ext = 0
 Plug 'ledger/vim-ledger'
 Plug 'ap/vim-css-color'
