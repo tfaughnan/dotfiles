@@ -38,6 +38,7 @@ fi
 
 numlockx &
 setxkbmap -option numpad:mac
+setxkbmap -option caps:escape
 
 # export QT_QPA_PLATFORMTHEME=gtk2
 export QT_STYLE_OVERRIDE=Windows
