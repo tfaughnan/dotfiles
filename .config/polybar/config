@@ -21,7 +21,7 @@ alternate5 = #6c99ba
 alternate6 = #a4c161
 
 [bar/mybar]
-modules-left = powermenu bspwm polypomo weather pl-left
+modules-left = powermenu bspwm weather pl-left
 modules-center = player-mpris-tail
 modules-right = pl-right pulseaudio battery date wireless-network mullvad
 background = ${colors.transparent}
