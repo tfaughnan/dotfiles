@@ -27,6 +27,7 @@ match TrailingWhitespace /\s\+$/
 
 autocmd FileType html setlocal et ts=2 sw=2
 autocmd FileType css setlocal et ts=2 sw=2
+autocmd FileType markdown setlocal et ts=4 sw=4
 autocmd FileType c syn keyword cTodo contained TODO FIXME XXX BUG HACK NOTE NB
 autocmd BufNewFile,BufRead *.h setfiletype c
 
