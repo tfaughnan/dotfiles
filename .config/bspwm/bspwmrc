@@ -30,7 +30,7 @@ if [ ! -e /tmp/bspwm_started ]; then
     bspc rule -a kitty:kitty_irc -o desktop=X
 
     kitty --name kitty_main &
-    kitty --name kitty_sysmonitor "$SHELL" -c "gotop; exec $SHELL -i" &
+    kitty --name kitty_sysmonitor "$SHELL" -c "gotop --nvidia; exec $SHELL -i" &
     kitty --name kitty_ws5 --session ~/.config/kitty/ws5.session &
     kitty --name kitty_irc "$SHELL" -c "weechat; exec $SHELL -i" &
 
