@@ -25,6 +25,7 @@ highlight ColorColumn ctermbg=black guibg=black
 highlight TrailingWhitespace ctermbg=red guibg=red
 match TrailingWhitespace /\s\+$/
 
+autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
 autocmd FileType html setlocal et ts=2 sw=2
 autocmd FileType css setlocal et ts=2 sw=2
 autocmd FileType markdown setlocal et ts=4 sw=4
